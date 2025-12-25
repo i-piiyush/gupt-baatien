@@ -4,10 +4,9 @@ import { Message, messageSchema } from "./message.model";
 export interface User {
   username: string;
   password: string;
-  verificationCode: string;
-  verificationCodeExpiry: Date;
+
   email: string;
-  isVerified: boolean;
+
   isAcceptingMessages: boolean;
   messages: Message[];
 }
@@ -32,18 +31,7 @@ const userSchema = new mongoose.Schema<User>({
     type: String,
     required: true,
   },
-  verificationCode: {
-    type: String,
-    required: true,
-  },
-  verificationCodeExpiry: {
-    type: Date,
-    required: true,
-  },
-  isVerified: {
-    type: Boolean,
-    default: false,
-  },
+
   isAcceptingMessages: {
     type: Boolean,
     default: true,
