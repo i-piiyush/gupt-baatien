@@ -4,9 +4,7 @@ import { Message, messageSchema } from "./message.model";
 export interface User {
   username: string;
   password: string;
-
   email: string;
-
   isAcceptingMessages: boolean;
   messages: Message[];
 }
