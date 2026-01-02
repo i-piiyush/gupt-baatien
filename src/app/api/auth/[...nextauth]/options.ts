@@ -9,10 +9,10 @@ export const authOptions: NextAuthOptions = {
       name: "credentials",
 
       credentials: {
-        email: {
-          label: "Email",
-          type: "email",
-          placeholder: "example@something.com",
+        username: {
+          label: "Username",
+          type: "text",
+          placeholder: "username",
         },
         password: { label: "Password", type: "password" },
       },
@@ -21,7 +21,7 @@ export const authOptions: NextAuthOptions = {
         await connectToDb();
         try {
           const user = await userModel.findOne({
-            email: credentials.email,
+            username: credentials.username,
           });
 
           if (!user) {

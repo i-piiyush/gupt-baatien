@@ -1,7 +1,6 @@
 // src/app/layout.tsx
 import { Toaster } from "@/components/ui/sonner";
-import "./globals.css";
-
+import "./globals.css"
 import AuthProvider from "@/context/AuthProvider";
 
 export const metadata = {
