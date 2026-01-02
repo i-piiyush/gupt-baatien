@@ -17,7 +17,7 @@ export const POST = async (request: Request) => {
       return Response.json(
         {
           success: false,
-          message: "user with same usernanme already exists",
+          message: "user with same username already exists",
         },
         {
           status: 400,

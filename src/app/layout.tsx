@@ -1,4 +1,5 @@
 // src/app/layout.tsx
+import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
 import AuthProvider from "@/context/AuthProvider";
@@ -17,6 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <AuthProvider>{children}</AuthProvider>
+        <Toaster theme="dark"  position="top-center" />
       </body>
     </html>
   );
