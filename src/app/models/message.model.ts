@@ -1,9 +1,11 @@
-import mongoose, { Schema, model, models } from "mongoose";
+import mongoose, { HydratedDocument, Schema, model, models } from "mongoose";
 
 export interface Message {
   content: string;
   createdAt: Date;
 }
+
+export type MessageDocument = HydratedDocument<Message>;
 
 export const messageSchema = new Schema<Message>({
   content: {

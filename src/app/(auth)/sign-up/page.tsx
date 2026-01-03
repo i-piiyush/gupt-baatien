@@ -44,7 +44,7 @@ const SignUp = () => {
       router.replace("/dashboard");
     } catch (error) {
       const err = error as AxiosError<apiResponse>;
-      toast.error(err.response?.data.message && "Error signing up");
+      toast.error(err.response?.data.message || "Error signing up");
     } finally {
       setLoading(false);
     }
